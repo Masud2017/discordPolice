@@ -33,5 +33,4 @@ async def on_message(message):
 async def on_member_join(member):
     await channel.send("Welcome new member".str(member))
 
-#client.run("Njk1OTU2NDYxODUwODUzMzk2.Xohwag.rpUYfcFZNtKRyPdYgoMfZJlwHKU") This token is for Test Server bot
-client.run("NjYwMzQyMDk1OTAyNTM5Nzc3.Xoi2_w.WaP7r29zKZQ_hVwOxzYkGvTI1WQ")
+client.run(YOUR_TOKEN_WILL_PLACED_HERE)
