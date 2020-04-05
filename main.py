@@ -1,6 +1,5 @@
 import discord
-import json,requests
-import re,os,hashlib
+import re
 
 
 client = discord.Client()
@@ -14,11 +13,6 @@ async def on_message(message):
 
     if message.content.find("!hello") != -1:
         await message.channel.send("Hi from bot :D")
-    elif message.content.find("!show") != -1:
-        # data will be shown here
-        req = requests.get("https://www.googleapis.com/youtube/v3/channels?id=UCyQSAi4Xh5ZQKpMPLEUPSrA&key=AIzaSyBYzmjpQYOb15ueTx3-Y2QcgI8_21Xlhr0&part=snippet,statistics&fields=items(id,snippet,statistics)")
-        reqData = json.loads(req.text)
-        await message.channel.send(reqData["error"]["errors"][0]["domain"])
     elif message.content == "!whatIsYourName":
         await message.channel.send("My name is : Discord-Police\nI am here for save you guys from censored verse :D")
 
@@ -33,5 +27,4 @@ async def on_message(message):
 async def on_member_join(member):
     await channel.send("Welcome new member".str(member))
 
-#client.run("Njk1OTU2NDYxODUwODUzMzk2.Xohwag.rpUYfcFZNtKRyPdYgoMfZJlwHKU") This token is for Test Server bot
-client.run("NjYwMzQyMDk1OTAyNTM5Nzc3.Xoi2_w.WaP7r29zKZQ_hVwOxzYkGvTI1WQ")
+client.run("YOUR_TOKEN_WILL_BE_PLACED_HERE")
